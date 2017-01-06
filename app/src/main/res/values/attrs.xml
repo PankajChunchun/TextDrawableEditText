@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextDrawableEditText">
+        <attr name="prefixText" format="string" />
+        <attr name="postfixText" format="string" />
+        <attr name="prePostTextColor" format="color" />
+        <attr name="prePostTextSize" format="dimension" />
+    </declare-styleable>
+</resources>
