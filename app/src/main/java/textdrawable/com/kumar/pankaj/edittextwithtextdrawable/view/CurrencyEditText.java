@@ -9,7 +9,8 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.widget.EditText;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -20,7 +21,7 @@ import java.util.Locale;
 /**
  * Created by Sangeeta on 1/14/2017.
  */
-public class CurrencyEditText extends EditText {
+public class CurrencyEditText extends AppCompatEditText {
     private static final int NO_LIMIT = -1;
     private static final int TYPE_CURRENCY = InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL;
     private static final NumberFormat US_CURRENCY_FORMATTER = NumberFormat.getCurrencyInstance(Locale.US);

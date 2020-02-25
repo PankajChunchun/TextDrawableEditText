@@ -5,14 +5,16 @@ import android.content.res.ColorStateList;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.widget.EditText;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 /**
  * Created by Sangeeta on 1/6/2017.
  */
-public class PostfixedEditText extends EditText {
+public class PostfixedEditText extends AppCompatEditText {
 
     private ColorStateList mPrefixTextColor;
 
@@ -65,7 +67,7 @@ public class PostfixedEditText extends EditText {
 
         @Override
         public int getOpacity() {
-            return 1;
+            return PixelFormat.RGBA_8888;
         }
 
     }

@@ -1,7 +1,8 @@
 package textdrawable.com.kumar.pankaj.edittextwithtextdrawable;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import textdrawable.com.kumar.pankaj.edittextwithtextdrawable.view.PostfixedEditText;
 import textdrawable.com.kumar.pankaj.edittextwithtextdrawable.view.PrefixedEditText;
@@ -13,10 +14,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*PrefixedEditText prefixedEditText = (PrefixedEditText) findViewById(R.id.editText);
-        PostfixedEditText postfixedEditText = (PostfixedEditText) findViewById(R.id.editText2);
+        PrefixedEditText prefixedEditText = findViewById(R.id.prefix_drawable_edittext);
+        PostfixedEditText postfixedEditText = findViewById(R.id.postfix_drawable_edittext);
 
         prefixedEditText.setPrefix("$");
-        postfixedEditText.setPrefix("%");*/
+        postfixedEditText.setPrefix("%");
     }
 }

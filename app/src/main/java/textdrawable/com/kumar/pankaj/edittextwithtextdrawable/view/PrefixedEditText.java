@@ -9,16 +9,19 @@ import android.content.res.ColorStateList;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.EditText;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 /**
  * Custom EditText that displays a fixed prefix in line with the text.
  * The trick here is to draw the prefix as a drawable and attach it via
  * setCompoundDrawables().
  */
-public class PrefixedEditText extends EditText {
+public class PrefixedEditText extends AppCompatEditText {
 
     private ColorStateList mPrefixTextColor;
 
@@ -71,7 +74,7 @@ public class PrefixedEditText extends EditText {
 
         @Override
         public int getOpacity() {
-            return 1;
+            return PixelFormat.RGBA_8888;
         }
 
     }

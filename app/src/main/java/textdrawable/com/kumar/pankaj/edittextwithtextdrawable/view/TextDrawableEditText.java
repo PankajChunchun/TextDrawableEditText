@@ -7,17 +7,20 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.EditText;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 import textdrawable.com.kumar.pankaj.edittextwithtextdrawable.R;
 
 /**
  * Created by Sangeeta on 1/6/2017.
  */
-public class TextDrawableEditText extends EditText {
+public class TextDrawableEditText extends AppCompatEditText {
 
     private String mPrefixText;
     private String mPostfixText;
@@ -119,7 +122,7 @@ public class TextDrawableEditText extends EditText {
 
         @Override
         public int getOpacity() {
-            return 1;
+            return PixelFormat.RGBA_8888;
         }
     }
 }
