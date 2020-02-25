@@ -4,21 +4,37 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.widget.EditText;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
 import textdrawable.com.kumar.pankaj.edittextwithtextdrawable.R;
 
+// Custom EditText that displays a fixed prefix and Postfix text (or either one) in line with the text.
+// The trick here is to draw the prefix as a drawable and attach it via setCompoundDrawables().
+
 /**
- * Created by Sangeeta on 1/6/2017.
+ * This class is designed to show read-only prefix/ postfix text in {@link android.widget.EditText}.
+ *
+ * <pre>
+ *     Set text
+ *
+ *   - To set postfix text use {@link TextDrawableEditText#setPostfixText(String)}
+ *   - To set postfix text use {@link TextDrawableEditText#setPrefixText(String)}
+ *
+ *     Set fixed-text color
+ *
+ *   - To set postfix text use {@link TextDrawableEditText#setPrePostTextColor(int)}
+ *   - To set postfix text use {@link TextDrawableEditText#setPrePostTextColor(ColorStateList)}
+ *
+ * </pre>
+ * <p>
+ * Created by Pankaj on 1/6/2017.
  */
 public class TextDrawableEditText extends AppCompatEditText {
 

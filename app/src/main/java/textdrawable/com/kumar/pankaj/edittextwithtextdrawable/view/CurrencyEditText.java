@@ -19,7 +19,7 @@ import java.text.ParseException;
 import java.util.Currency;
 import java.util.Locale;
 /**
- * Created by Sangeeta on 1/14/2017.
+ * Created by Pankaj on 1/14/2017.
  */
 public class CurrencyEditText extends AppCompatEditText {
     private static final int NO_LIMIT = -1;

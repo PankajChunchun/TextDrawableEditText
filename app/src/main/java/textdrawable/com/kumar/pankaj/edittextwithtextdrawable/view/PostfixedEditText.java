@@ -11,8 +11,19 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
+// Custom EditText that displays a fixed prefix in line with the text.
+// The trick here is to draw the prefix as a drawable and attach it via setCompoundDrawables().
 /**
- * Created by Sangeeta on 1/6/2017.
+ * This class is designed to show read-only prefix text in {@link android.widget.EditText}.
+ *
+ * <pre>
+ *   - To set postfix text use {@link PostfixedEditText#setPrefix(String)}
+ *   - To set text color of postfix text use {@link PostfixedEditText#setPrefixTextColor(int)} or
+ *   {@link PostfixedEditText#setPrefixTextColor(ColorStateList)}
+ *
+ * </pre>
+ * <p>
+ * Created by Pankaj on 1/6/2017.
  */
 public class PostfixedEditText extends AppCompatEditText {
 
@@ -69,7 +80,5 @@ public class PostfixedEditText extends AppCompatEditText {
         public int getOpacity() {
             return PixelFormat.RGBA_8888;
         }
-
     }
 }
-
